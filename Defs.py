@@ -81,13 +81,17 @@ def buscarSenha(login, senha):
 def logado(login, senha):
     if buscarLogin(login) and buscarSenha(login,senha) == True:
         print("Usuário logado com sucesso !")
+        time.sleep(2)
         return True
     elif buscarLogin(login) == True and buscarSenha(login,senha) == False:
         print("Senha incorreta, tente novamente !")
+        time.sleep(2)
         return False
     elif buscarLogin(login) == False and buscarSenha(login,senha) == True:
         print("Login incorreto, tente novamente!")
+        time.sleep(2)
         return False
     else:
         print("Login e senha incorretos, tente novamente ou cadastre um novo usuário!")
+        time.sleep(2)
         return False
