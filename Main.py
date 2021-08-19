@@ -7,7 +7,7 @@ FUNCIONALIDADES:
 - Tratar os erros;
 '''
 
-from Defs import buscarLogin, gravarArquivo
+from Defs import buscarLogin, cadastrarLogin, gravarArquivo
 from os import system
 import time
 
@@ -27,6 +27,7 @@ while True :
             #Cadastrar login novo
             login = input("Digite o login: ")
             senha = input("Digite a senha: ")
+            cadastrarLogin(login, senha)
             gravarArquivo(login, senha)
             time.sleep(0.4)
             print("Cadastrado com sucesso!")
